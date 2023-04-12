@@ -5,14 +5,14 @@ RUN set -ex \
     && wget -q -O - http://www.xunsearch.com/scws/down/scws-1.2.3.tar.bz2 | tar jxf - \
     && wget -q -O - "https://github.com/amutu/zhparser/archive/master.tar.gz" | tar zxf - \
     && wget -q -O - "https://github.com/jaiminpan/pg_jieba/archive/master.tar.gz" | tar zxf - \
-    && wget -q -O - "https://github.com/yanyiwu/cppjieba/archive/45809955f5a345886ec3d49cbed3ec68ced70b1c.tar.gz" | tar zxf - \
+    && wget -q -O - "https://github.com/yanyiwu/cppjieba/archive/refs/tags/v5.0.3.tar.gz" | tar zxf - \
     && cd /scws-1.2.3 \
     && ./configure \
     && make install \
     && cd /zhparser-master \
     && make \
     && make install \
-    && mv /cppjieba-45809955f5a345886ec3d49cbed3ec68ced70b1c/* /pg_jieba-master/libjieba \
+    && mv /cppjieba-5.0.3/* /pg_jieba-master/libjieba \
     && mkdir /pg_jieba-master/build \
     && cd /pg_jieba-master/build \
     && cmake .. \
