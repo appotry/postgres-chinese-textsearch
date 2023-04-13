@@ -23,6 +23,10 @@ docker run --name postgres-zh -e POSTGRES_PASSWORD=mypassword -d bloodstar/postg
 
 ## 使用说明
 
+### 宝塔搭建
+
+[RSS的使用与Tiny Tiny RSS Selfhost自建](https://blog.17lai.site/posts/f4926c88/)
+
 ### Docker compose
 
 ```yaml
